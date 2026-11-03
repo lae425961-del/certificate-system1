@@ -143,12 +143,7 @@ export default function Admin() {
             </span>
             ເພີ່ມນັກສຶກສາ
           </button>
-          <button
-            onClick={() => window.print()}
-            className="btn-ghost !rounded-lg !px-3 !py-2 print:hidden"
-          >
-            ພິມລາຍງານ
-          </button>
+          
           <button
             onClick={exportXlsx}
             className="btn-primary !rounded-lg !px-3 !py-2 print:hidden"
