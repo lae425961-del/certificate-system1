@@ -1,0 +1,15 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; }
+body {
+  @apply bg-paper font-lao text-ink antialiased;
+  background-image: radial-gradient(ellipse at 12% 0%, rgba(77, 157, 224, .13), transparent 34rem), radial-gradient(ellipse at 100% 12%, rgba(22, 59, 101, .07), transparent 30rem);
+}
+::selection { @apply bg-gold/25 text-ink; }
+@layer components {
+  .field { @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base outline-none transition duration-200 placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400; }
+  .label { @apply mb-1.5 block text-sm font-semibold text-slate-700; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-medium transition duration-200 active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply btn bg-ink text-white shadow-lg shadow-ink/15 hover:-translate-y-0.5 hover:bg-ink/90 hover:shadow-xl; }
+  .btn-ghost { @apply btn border border-line bg-white/80 text-ink hover:border-gold/50 hover:bg-white hover:shadow-sm; }
+  .surface { @apply rounded-3xl border border-white/80 bg-white/90 shadow-xl shadow-ink/[.06] backdrop-blur; }
+}
